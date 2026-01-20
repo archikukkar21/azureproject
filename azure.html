@@ -2,45 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HTML & CSS Button</title>
+    <title>Themed Button UI</title>
 
-    <!-- CSS starts here -->
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            margin-top: 100px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
         }
 
-        h1 {
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            width: 320px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .card h1 {
+            margin-bottom: 10px;
             color: #333;
         }
 
+        .card p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
         .btn {
-            background-color: #4CAF50;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
             color: white;
-            padding: 12px 25px;
+            padding: 14px 30px;
             font-size: 16px;
             border: none;
-            border-radius: 6px;
+            border-radius: 30px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            box-shadow: 0 8px 20px rgba(255,117,140,0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .btn:hover {
-            background-color: #45a049;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(255,117,140,0.6);
+        }
+
+        .btn:active {
+            transform: scale(0.96);
         }
     </style>
-    <!-- CSS ends here -->
 </head>
 
 <body>
 
-    <h1>Welcome to HTML & CSS</h1>
-    <p>This is a simple button example</p>
-
-    <button class="btn">Click Me</button>
+    <div class="card">
+        <h1>Hello Archi 👋</h1>
+        <p>Welcome to your first themed UI using HTML & CSS</p>
+        <button class="btn">Explore Now 🚀</button>
+    </div>
 
 </body>
 </html>
